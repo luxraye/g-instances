@@ -39,7 +39,7 @@ async function main() {
     { email: "standards@vantage.instances.app",  name: "Vantage Inc" },
   ];
 
-  const licenseeUsers = [];
+  const licenseeUsers: Awaited<ReturnType<typeof prisma.user.upsert>>[] = [];
   for (const l of licensees) {
     const u = await prisma.user.upsert({
       where:  { email: l.email },
