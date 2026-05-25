@@ -89,7 +89,7 @@ export default async function LicenseeDashboard() {
           { label: "Approved",          value: stats.approved, icon: <CheckCircle2 size={20} />,  color: "var(--accent)" },
           { label: "Needs action",      value: stats.flagged,  icon: <AlertTriangle size={20} />, color: "#e07b39" },
         ].map((s) => (
-          <div key={s.label} style={{ background: "#fff", border: "1px solid var(--border)", borderRadius: 12, padding: 20 }} style={{ border: "1px solid var(--border)" }}>
+          <div key={s.label} style={{ background: "#fff", border: "1px solid var(--border)", borderRadius: 12, padding: 20 }}>
             <div
               className="w-9 h-9 rounded-lg flex items-center justify-center mb-2"
               style={{ background: `${s.color}18`, color: s.color }}
@@ -103,7 +103,7 @@ export default async function LicenseeDashboard() {
       </div>
 
       {/* Recent submissions */}
-      <div style={{ background: "#fff", border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }} style={{ border: "1px solid var(--border)" }}>
+      <div style={{ background: "#fff", border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }}>
         <div className="px-5 py-4 flex items-center justify-between" style={{ borderBottom: "1px solid var(--border)" }}>
           <h2 className="text-sm font-semibold" style={{ color: "var(--text-primary)" }}>Recent submissions</h2>
           <Link

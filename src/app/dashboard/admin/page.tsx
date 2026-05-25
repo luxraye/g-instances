@@ -16,7 +16,7 @@ function StatCard({
   accent?: string;
 }) {
   return (
-    <div style={{ background: "#fff", border: "1px solid var(--border)", borderRadius: 12, padding: 20 }} style={{ borderColor: "var(--border)" }}>
+    <div style={{ background: "#fff", border: "1px solid var(--border)", borderRadius: 12, padding: 20 }}>
       <p
         className="text-2xl font-bold"
         style={{ color: accent ?? "var(--text-primary)" }}
@@ -152,7 +152,7 @@ export default async function AdminOverviewPage() {
       {/* Recent activity */}
       <div>
         <h2 className="text-base font-semibold mb-3" style={{ color: "var(--text-primary)" }}>Recent activity</h2>
-        <div style={{ background: "#fff", border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }} style={{ borderColor: "var(--border)" }}>
+        <div style={{ background: "#fff", border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }}>
           <table style={{ width: "100%", fontSize: 13, borderCollapse: "collapse" }}>
             <thead>
               <tr style={{ background: "#fff", borderBottom: "1px solid var(--border)" }}>
