@@ -2,6 +2,7 @@
 import { PrismaClient } from "@prisma/client";
 import bcrypt from "bcryptjs";
 import type { User } from "@prisma/client"; 
+import { InstanceStatus } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
@@ -105,8 +106,7 @@ async function main() {
   });
 
   // Demo instances
-  const statuses = ["PENDING","IN_PROGRESS","SUBMITTED","APPROVED","FLAGGED","PENDING","IN_PROGRESS","SUBMITTED","APPROVED"];
-  for (let i = 0; i < licenseeUsers.length; i++) {
+const statuses: InstanceStatus[] = ["PENDING","IN_PROGRESS","SUBMITTED","APPROVED","FLAGGED","PENDING","IN_PROGRESS","SUBMITTED","APPROVED"];  for (let i = 0; i < licenseeUsers.length; i++) {
     const u = licenseeUsers[i];
     const tpl = i % 2 === 0 ? qms : importCoC;
     const status = statuses[i % statuses.length];
